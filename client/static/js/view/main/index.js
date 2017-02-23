@@ -15,6 +15,7 @@ class MessageList extends React.Component {
         var self = this;
         var messages = this.state.messageList;
         var arr = [];
+        console.log('are you kinding me');
 
         messages
         .forEach(function(em) {
@@ -34,12 +35,14 @@ class MessageList extends React.Component {
         .getAllData(function (data) {
             var i = 0;
             var len = data.length;
+            console.log('data: ' + data);
             var messageListArr = [];
             for(; i<len; i++) {
-                messageListArr[i] = data[i].Message;
+                // messageListArr[i] = data[i].Message;
+                messageListArr[i] = data[i];
             }
             self.setState({messageList: messageListArr});
-            console.log(self.state.messageList);
+            //console.log(self.state.messageList.length);
         })
     }
 }

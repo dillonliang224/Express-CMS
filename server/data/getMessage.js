@@ -1,3 +1,5 @@
+var Article = require('./Article.js');
+
 var MessageList = [
 
 { "Message":"Hello React"},
@@ -11,5 +13,6 @@ var MessageList = [
 ];
 
 exports.getMessageList = function (callback) {
+    //Article.find(callback);
     callback(MessageList);
 };

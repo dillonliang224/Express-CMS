@@ -11,8 +11,12 @@ class Store_MessageList extends EventEmitter {
             "/data/getMessage/"
         )
         .then(function(res) {
+            console.log('res: ' +res);
             if (res.ok) {
+                console.log('is ok');
+                //console.log(res.data);
                 res.json().then(function(data) {
+                    console.log('dillon here has data ');
                     self.allData = data;
                     callback(self.allData);
                 });

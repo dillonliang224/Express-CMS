@@ -10,8 +10,13 @@ exports.save = function (article) {
     })
 }
 
-exports.find = function () {
+exports.find = function (callback) {
     Article.find({}, function (err, articles) {
-        console.log('articles: ' + articles.toString());
+        if (!err) {
+            console.log('articles: get article data done');
+            callback(articles)
+        } else {
+            console.log('dillon: you need to know, get articles has error');
+        }
     })
 }
