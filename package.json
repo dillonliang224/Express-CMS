@@ -1,0 +1,39 @@
+{
+  "name": "express-cms",
+  "version": "1.0.0",
+  "description": "express cms",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dillonliang224/Express-CMS.git"
+  },
+  "keywords": [
+    "express",
+    "cms",
+    "mongoose"
+  ],
+  "author": "Dillon Liang",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dillonliang224/Express-CMS/issues"
+  },
+  "homepage": "https://github.com/dillonliang224/Express-CMS#readme",
+  "dependencies": {
+    "ejs": "^2.5.6",
+    "express": "^4.14.1",
+    "mongoose": "^4.8.4",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2",
+    "webpack": "^2.2.1"
+  },
+  "devDependencies": {
+    "babel-core": "^6.23.1",
+    "babel-loader": "^6.3.2",
+    "css-loader": "^0.26.1",
+    "jsx-loader": "^0.13.2",
+    "style-loader": "^0.13.1"
+  }
+}
