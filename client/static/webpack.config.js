@@ -3,7 +3,7 @@ var webpack = require('webpack');
 module.exports = {
     // 页面入口文件配置
     entry : {
-        'view/main/index': './js/view/main/index.js'
+        'view/index': './js/view/index.js'
     },
     // 入口文件输出配置
     output : {

@@ -5,29 +5,6 @@ class Store_Article extends EventEmitter {
         this.allData = null;
     }
 
-    getAllData(callback) {
-        var self = this;
-        fetch(
-            "/data/getMessage/"
-        )
-        .then(function(res) {
-            console.log('res: ' +res);
-            if (res.ok) {
-                console.log('is ok');
-                //console.log(res.data);
-                res.json().then(function(data) {
-                    console.log('dillon here has data ');
-                    self.allData = data;
-                    callback(self.allData);
-                });
-            } else {
-                console.log("Looks like the response wasn't perfect, got status", res.status);
-            }
-        }, function(e) {
-            console.log("Fetch failed!", e);
-        });
-    }
-
     getArticleById(callback) {
         var self = this;
         fetch ("/api/article/")

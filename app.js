@@ -5,7 +5,7 @@ var ejs = require('ejs');
 
 var app = express();
 
-// 对所有(/)URL或路由返回index.html 
+// 对所有(/)URL或路由返回index.html
 app.get('/', function (req, res) {
     res.render('index');
 });
