@@ -5,6 +5,11 @@ var ejs = require('ejs');
 
 var app = express();
 
+// 对所有(/)URL或路由返回index.html 
+app.get('/', function (req, res) {
+    res.render('index');
+});
+
 // 新增接口路由
 app.get('/data/:module', function (req, res, next) {
     var c_path = req.params.module;
@@ -12,10 +17,17 @@ app.get('/data/:module', function (req, res, next) {
     Action.execute(req, res);
 });
 
-// 对所有(/)URL或路由返回index.html 
-app.get('/', function (req, res) {
-    res.render('index');
+// 新增接口路由 用来获取指定ID的article
+app.get('/api/article/:articleId', function (req, res, next) {
+    var Action = require('./server/action/data/getArticle');
+    Action.execute(req, res);
 });
+
+// 新增接口路由 用来获取所有articles
+app.get('/api/articles/', function (req, res, next) {
+    var Action = require('./server/action/data/getArticles');
+    Action.execute(req, res);
+})
 
 // 设置views路径和模板
 app.set('views', './client/view');

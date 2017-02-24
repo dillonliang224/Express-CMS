@@ -16,3 +16,7 @@ exports.getMessageList = function (callback) {
     //Article.find(callback);
     callback(MessageList);
 };
+
+exports.getArticleById = function (callback) {
+    // todo
+}
