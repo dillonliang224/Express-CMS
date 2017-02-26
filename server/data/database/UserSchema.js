@@ -7,3 +7,7 @@ var UserSchema = mongoose.Schema({
 });
 
 module.exports = UserSchema;
+
+/*
+  just define User Schema.
+*/

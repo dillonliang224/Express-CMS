@@ -20,3 +20,7 @@ var ArticleSchema = mongoose.Schema({
 });
 
 module.exports = ArticleSchema;
+
+/*
+  just define Article Schema.
+*/

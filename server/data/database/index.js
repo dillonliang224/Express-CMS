@@ -12,3 +12,7 @@ database.on('error', console.error.bind(console, 'connection error:'))
 // });
 
 module.exports = mongoose.model('Article', ArticleSchema);
+
+/*
+  this file is used to connect mongodb and export database model.
+*/

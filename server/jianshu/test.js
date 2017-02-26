@@ -71,5 +71,7 @@ function getData(url) {
 }
 
 startGame(url)
-
+/*
+  this file is used to get data from jianshu
+*/
 // mongod.exe --config D:\mongodb\mongo.config
