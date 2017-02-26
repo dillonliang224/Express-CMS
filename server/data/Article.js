@@ -1,4 +1,4 @@
-var Article = require('./db/db');
+var Article = require('./database/index.js');
 
 exports.save = function (article) {
     new Article(article).save(article, function (err, docs) {
@@ -25,7 +25,6 @@ exports.findArticleById = function (articleId, callback) {
     Article.find({"id":"eb7abee996e1"}, function (err, article) {
         if (!err) {
             console.log('get article with article id: ' + articleId);
-            console.log(article);
             callback(article);
         };
     })

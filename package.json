@@ -4,7 +4,8 @@
   "description": "express cms",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "feed": "node ./server/jianshu/test.js"
   },
   "repository": {
     "type": "git",

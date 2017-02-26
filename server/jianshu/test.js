@@ -36,7 +36,13 @@ function getData(url) {
               article_meta = $('.article .author .info .meta'),
               publish_time = article_meta.find('.publish-time').text().trim(),
               wordage = article_meta.find('.wordage').text().trim(),
-              content = $('.article .show-content ').html()
+              content = $('.article .show-content ').html(),
+              abstract = $('.article .show-content p').first().text().slice(0, 80),
+              imageDiv = $('.article .show-content .image-package').first(),
+              image;
+            if (imageDiv) {
+              image = imageDiv.find('img').attr('src');
+            }
 
             let article = {
               id: article_id,
@@ -50,10 +56,12 @@ function getData(url) {
                 publish_time: publish_time,
                 wordage: wordage
               },
+              image: image,
               content: content,
+              abstract: abstract,
               is_from_jianshu: true
             }
-
+            // console.log(article);
             save(article)
           }
         })
@@ -62,5 +70,6 @@ function getData(url) {
   })
 }
 
-//startGame(url)
+startGame(url)
 
+// mongod.exe --config D:\mongodb\mongo.config
