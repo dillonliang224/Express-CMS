@@ -6,7 +6,8 @@ router.get('/', function (req, res) {
     res.render('index');
 });
 
-// 新增接口路由 用来获取指定ID的article
+// 新增接口路由 用来获取指定ID的articl
+
 router.get('/api/article/:articleId', function (req, res, next) {
     var Action = require('./action/Article').findArticleById;
     Action(req, res);
@@ -17,6 +18,18 @@ router.get('/api/article/:articleId', function (req, res, next) {
 router.get('/api/articles/', function (req, res, next) {
     var Action = require('./action/Article').findArticles;
     Action(req, res);
+});
+
+router.post('/api/articles/', function (req, res, next) {
+    res.send('game');
+});
+
+router.put('/api/article/:articleId', function (req, res, next) {
+  res.send('delete');
+});
+
+router.delete('/api/article/:articleId', function (req, res, next) {
+  res.send('delete')
 });
 
 module.exports = router;
