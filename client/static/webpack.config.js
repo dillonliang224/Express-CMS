@@ -21,11 +21,11 @@ module.exports = {
             test: /\.css$/,
             loader: 'style-loader!css-loader'
         }
-        ]        
+        ]
     },
     // 其他解决方案配置
     resolve: {
-        extensions: ['', '.js', '.jsx', '.css', '.json'],
+        extensions: ['.js', '.jsx', '.css', '.json'],
     },
     // 插件项
     plugins : [

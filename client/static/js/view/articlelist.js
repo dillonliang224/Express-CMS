@@ -1,5 +1,4 @@
 var React = require('react');
-var ReactDOM = require('react-dom');
 var store = require('../store/index.js');
 
 class ArticleList extends React.Component {
@@ -40,9 +39,4 @@ class ArticleList extends React.Component {
             self.setState({articleList: articleListArr});
         })
     }
-}
-
-ReactDOM.render(
-  <ArticleList />,
-  document.getElementById('main-container')
-);
+};
